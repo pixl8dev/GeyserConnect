@@ -74,8 +74,7 @@ public class UIHandler {
     public void sendMainMenu() {
         SimpleForm.Builder mainMenu = SimpleForm.builder()
             .title("Main Menu")
-            .button("Official Servers")
-            .button("Geyser Servers");
+            .button("Recommended Servers");
 
         // Add a buttons for custom servers
         if (GeyserConnect.instance().config().customServers().enabled()) {
