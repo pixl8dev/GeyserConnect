@@ -95,16 +95,13 @@ public class UIHandler {
                     case 0:
                         sendServersMenu(ServerCategory.OFFICIAL);
                         return;
-                    case 1:
-                        sendServersMenu(ServerCategory.GEYSER);
-                        return;
                     default:
                         if (GeyserConnect.instance().config().customServers().enabled()) {
                             switch (response.clickedButtonId()) {
-                                case 2:
+                                case 1:
                                     sendServersMenu(ServerCategory.CUSTOM);
                                     return;
-                                case 3:
+                                case 2:
                                     sendDirectConnectMenu();
                                     return;
                             }
