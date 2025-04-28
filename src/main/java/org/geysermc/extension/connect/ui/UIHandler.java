@@ -199,7 +199,7 @@ public class UIHandler {
             .input("IP", "play.fademc.xyz")
             .input("Port", "25565", "25565")
             .toggle("Premium?", true)
-            .toggle("Bedrock Server?", false)
+            .toggle("Bedrock Server?", true)
             .closedOrInvalidResultHandler(response -> {
                 sendEditServersMenu();
             })
@@ -286,7 +286,7 @@ public class UIHandler {
             .input("IP", "play.fademc.xyz")
             .input("Port", "25565", "25565")
             .toggle("Premium?", true)
-            .toggle("Bedrock Server?", false)
+            .toggle("Bedrock Server?", true)
             .closedOrInvalidResultHandler(response -> {
                 sendMainMenu();
             })
