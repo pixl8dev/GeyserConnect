@@ -196,9 +196,9 @@ public class UIHandler {
     public void sendAddServerMenu() {
         session.sendForm(CustomForm.builder()
             .title("Add Server")
-            .input("IP", "play.cubecraft.net")
+            .input("IP", "play.fademc.xyz")
             .input("Port", "25565", "25565")
-            .toggle("Cracked?", false)
+            .toggle("Premium?", true)
             .toggle("Bedrock Server?", false)
             .closedOrInvalidResultHandler(response -> {
                 sendEditServersMenu();
@@ -246,8 +246,8 @@ public class UIHandler {
             .title("Edit Server")
             .input("IP", server.address(), server.address())
             .input("Port", String.valueOf(server.port()), String.valueOf(server.port()))
-            .toggle("Online mode", server.online())
-            .toggle("Bedrock/Geyser server", server.bedrock())
+            .toggle("Premium?", server.online())
+            .toggle("Bedrock Server?", server.bedrock())
             .closedOrInvalidResultHandler(response -> {
                 sendServerOptionsMenu(server);
             })
@@ -283,10 +283,10 @@ public class UIHandler {
     public void sendDirectConnectMenu() {
         session.sendForm(CustomForm.builder()
             .title("Direct Connect")
-            .input("IP", "play.cubecraft.net")
+            .input("IP", "play.fademc.xyz")
             .input("Port", "25565", "25565")
-            .toggle("Online mode", true)
-            .toggle("Bedrock/Geyser server", false)
+            .toggle("Premium?", true)
+            .toggle("Bedrock Server?", false)
             .closedOrInvalidResultHandler(response -> {
                 sendMainMenu();
             })
