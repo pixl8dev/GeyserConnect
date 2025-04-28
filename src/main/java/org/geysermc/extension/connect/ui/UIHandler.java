@@ -117,7 +117,7 @@ public class UIHandler {
 
     public void sendServersMenu(ServerCategory category) {
         SimpleForm.Builder serversMenu = SimpleForm.builder()
-            .title(category.title() + " Servers");
+            .title("Servers");
 
         List<Server> servers;
         if (category == ServerCategory.CUSTOM) {
