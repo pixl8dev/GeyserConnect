@@ -198,8 +198,8 @@ public class UIHandler {
             .title("Add Server")
             .input("IP", "play.cubecraft.net")
             .input("Port", "25565", "25565")
-            .toggle("Online mode", true)
-            .toggle("Bedrock/Geyser server", false)
+            .toggle("Cracked?", false)
+            .toggle("Bedrock Server?", false)
             .closedOrInvalidResultHandler(response -> {
                 sendEditServersMenu();
             })
